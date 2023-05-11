@@ -11,7 +11,7 @@ class DatabaseService {
   final CollectionReference groupCollection =
       FirebaseFirestore.instance.collection("groups");
 
-  //unpdating the userdata and registering data
+  //updating the userdata and registering data
 
   Future updateUserData(String fullName, String email) async {
     return await userCollection.doc(uid).set({
@@ -55,8 +55,7 @@ class DatabaseService {
 
     DocumentReference userDocumentReference = userCollection.doc(uid);
     return await userDocumentReference.update({
-      "groups":
-          FieldValue.arrayUnion(["${groupDocumentReference.id}_$groupName"]),
+      "groups":FieldValue.arrayUnion(["${groupDocumentReference.id}_$groupName"]),
     });
   }
 

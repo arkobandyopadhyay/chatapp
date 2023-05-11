@@ -52,7 +52,7 @@ class _ChatPageState extends State<ChatPage> {
         }, icon: const Icon(Icons.info) ),
       ],
       ),
-      body: Center(child: Text("Chat Page")),
+      body: Center(child: Text(widget.groupName)),
     );
   }
 }

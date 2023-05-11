@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   String getName(String res) {
-    return res.substring(res.indexOf("_"));
+    return res.substring(res.indexOf("_")+1);
   }
 
   getUserData() async {
