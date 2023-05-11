@@ -6,7 +6,6 @@ class HelperFunction {
   static String userNameKey = "USERNAMEKEY";
   static String userEmailKey = "USERMAILKEY";
 
-
   //saving the data to SF
   static Future<bool?> saveUserLoggedInStatus(bool isUserLoggedIn) async {
     SharedPreferences sf = await SharedPreferences.getInstance();
@@ -38,6 +37,4 @@ class HelperFunction {
     SharedPreferences sf = await SharedPreferences.getInstance();
     return sf.getString(userNameKey);
   }
-
-
 }
